@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TropicTModelStoreContainer" CdmEntityContainer="TropicTEntities">
+    <EntitySetMapping Name="Offers">
+      <EntityTypeMapping TypeName="TropicTModel.Offers">
+        <MappingFragment StoreEntitySet="Offers">
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="listPrice" ColumnName="listPrice" />
+          <ScalarProperty Name="tourId" ColumnName="tourId" />
+          <ScalarProperty Name="offersDesc" ColumnName="offersDesc" />
+          <ScalarProperty Name="offersName" ColumnName="offersName" />
+          <ScalarProperty Name="offersgUId" ColumnName="offersgUId" />
+          <ScalarProperty Name="offersId" ColumnName="offersId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Role">
+      <EntityTypeMapping TypeName="TropicTModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="roleName" ColumnName="roleName" />
+          <ScalarProperty Name="roleId" ColumnName="roleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TourType">
+      <EntityTypeMapping TypeName="TropicTModel.TourType">
+        <MappingFragment StoreEntitySet="TourType">
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="tourName" ColumnName="tourName" />
+          <ScalarProperty Name="tourId" ColumnName="tourId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserAccount">
+      <EntityTypeMapping TypeName="TropicTModel.UserAccount">
+        <MappingFragment StoreEntitySet="UserAccount">
+          <ScalarProperty Name="date_modified" ColumnName="date_modified" />
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+          <ScalarProperty Name="roleId" ColumnName="roleId" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_role">
+      <EntityTypeMapping TypeName="TropicTModel.vw_role">
+        <MappingFragment StoreEntitySet="vw_role">
+          <ScalarProperty Name="roleName" ColumnName="roleName" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

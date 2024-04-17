@@ -1,0 +1,76 @@
+﻿@model IEnumerable<TropicTrail.Offers>
+
+@{
+    ViewBag.Title = "ManageOffers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ManageOffers</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.offersgUId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.offersName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.offersDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tourId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.listPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateCreated)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.userId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.offersgUId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.offersName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.offersDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tourId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.listPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateCreated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.userId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.offersId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.offersId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.offersId })
+        </td>
+    </tr>
+}
+
+</table>
