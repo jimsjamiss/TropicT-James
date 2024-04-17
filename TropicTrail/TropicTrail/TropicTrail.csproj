@@ -124,6 +124,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\css\index-css.css" />
     <Content Include="Content\css\style.css" />
     <Content Include="Content\css\style.min.css" />
     <Content Include="Content\js\main.js" />
@@ -162,16 +163,6 @@
     <Content Include="Content\mail\jqBootstrapValidation.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="ModelTropicT.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelTropicT.edmx</DependentUpon>
-      <LastGenOutput>ModelTropicT.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="ModelTropicT.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelTropicT.edmx</DependentUpon>
-      <LastGenOutput>ModelTropicT.cs</LastGenOutput>
-    </Content>
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="scripts\bootstrap.js" />
@@ -275,13 +266,6 @@
     <Content Include="Content\scss\bootstrap\scss\_utilities.scss" />
     <Content Include="Content\scss\bootstrap\scss\_variables.scss" />
     <Content Include="Content\scss\style.scss" />
-    <EntityDeploy Include="ModelTropicT.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelTropicT.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="ModelTropicT.edmx.diagram">
-      <DependentUpon>ModelTropicT.edmx</DependentUpon>
-    </Content>
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -291,6 +275,16 @@
     <Content Include="scripts\jquery.validate.unobtrusive.js" />
     <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
+    <Content Include="TropicTEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TropicTEntities.edmx</DependentUpon>
+      <LastGenOutput>TropicTEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="TropicTEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TropicTEntities.edmx</DependentUpon>
+      <LastGenOutput>TropicTEntities.cs</LastGenOutput>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="Views\Home\SignUp.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
@@ -307,23 +301,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\UserLogged.cs" />
-    <Compile Include="ModelTropicT.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelTropicT.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelTropicT.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelTropicT.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelTropicT.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelTropicT.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Offers.cs">
-      <DependentUpon>ModelTropicT.tt</DependentUpon>
+      <DependentUpon>TropicTEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BaseRepository.cs" />
@@ -331,18 +310,33 @@
     <Compile Include="Repository\TourTypeManager.cs" />
     <Compile Include="Repository\UserManager.cs" />
     <Compile Include="Role.cs">
-      <DependentUpon>ModelTropicT.tt</DependentUpon>
+      <DependentUpon>TropicTEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TourType.cs">
-      <DependentUpon>ModelTropicT.tt</DependentUpon>
+      <DependentUpon>TropicTEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TropicTEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TropicTEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TropicTEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TropicTEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TropicTEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TropicTEntities.edmx</DependentUpon>
     </Compile>
     <Compile Include="UserAccount.cs">
-      <DependentUpon>ModelTropicT.tt</DependentUpon>
+      <DependentUpon>TropicTEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Utils\MyRole.cs" />
     <Compile Include="Utils\Utilities.cs" />
     <Compile Include="vw_role.cs">
-      <DependentUpon>ModelTropicT.tt</DependentUpon>
+      <DependentUpon>TropicTEntities.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -360,6 +354,13 @@
     <Content Include="scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Admin\AddOffers.cshtml" />
     <Content Include="Views\Admin\ManageOffers.cshtml" />
+    <EntityDeploy Include="TropicTEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TropicTEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="TropicTEntities.edmx.diagram">
+      <DependentUpon>TropicTEntities.edmx</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -369,6 +370,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\images\" />
     <Folder Include="Content\img\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
